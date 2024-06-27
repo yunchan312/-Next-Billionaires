@@ -25,13 +25,9 @@ export default async function BillionDetails({ id }: { id: string }) {
       <div className="mt-12">
         <div className="font-bold text-3xl mb-3">Financial Assets</div>
         <div className="flex flex-wrap gap-5">
-          {detail.financialAssests ? (
-            detail.financialAssets.map((a, i) => {
-              return <AssetCard key={i} assets={a} />;
-            })
-          ) : (
-            <div>No Infomations</div>
-          )}
+          {detail.financialAssets.map((a, i) => {
+            return <AssetCard key={i} assets={a} />;
+          })}
         </div>
       </div>
     </div>
